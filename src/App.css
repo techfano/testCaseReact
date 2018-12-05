@@ -1,0 +1,17 @@
+@import url("https://morph.pe/morph-1.6.4.css");
+@import url('https://fonts.googleapis.com/css?family=Karla|Roboto:300,400');
+
+body{
+  background: #CDCDCD;
+  overflow-x: hidden; 
+}
+
+.container{
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 1280px;
+  height: calc(100% - 52px);
+  margin: auto;
+  background: #FFFFFF;
+}
