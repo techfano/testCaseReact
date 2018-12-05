@@ -2,16 +2,82 @@
 @import url('https://fonts.googleapis.com/css?family=Karla|Roboto:300,400');
 
 body{
-  background: #CDCDCD;
+  background: #F5F5F5;
   overflow-x: hidden; 
 }
 
 .container{
   position: absolute;
+  padding-left: 25px;
+  padding-right: 25px;
   left: 0;
   right: 0;
-  width: 1280px;
+  width: 1024px;
   height: calc(100% - 52px);
   margin: auto;
   background: #FFFFFF;
+}
+
+
+.nav-container{
+  position: relative;
+  float: left;
+  width: 300px;
+}
+
+nav{
+  position: relative;
+  display: grid;
+  width: 100%;
+  border: 1px solid #CCCCCC;
+}
+nav a.selected{
+  background: #49a84c;
+  color: white !important;
+  font-weight: bold;
+}
+
+.document{
+  position: relative;
+  float: right;
+  height: calc(100% - 100px);
+  width: calc(100% - 360px);
+  border: 1px solid #CCCCCC;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+header a.option {
+  font-weight: normal;
+}
+
+button{
+  margin: 0;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+button.green, .button.green{
+  border: 0 !important;
+}
+
+.float-left{
+  float: left;
+}
+
+.float-right{
+  position: relative;
+  float: right;
+}
+
+@media (max-width: 1000px){
+  .container {
+    width: 100%;
+    padding: 10px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+  .row{
+    display: block;
+  }
 }

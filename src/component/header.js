@@ -6,7 +6,7 @@ export default class Header extends React.Component {
   render() {
     return (
         <div>
-          <header>
+          <header className="black">
             <div className="brand">
               Data Gate
             </div>
