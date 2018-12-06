@@ -1,0 +1,25 @@
+.tabs{
+  position: relative;
+  display: flex;
+  margin-bottom: 18px;
+  border-bottom: 1px solid #cccccc;
+  width: auto;
+  & .option{
+    width: auto;
+    padding-left: 39px;
+    padding-right: 39px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    cursor: pointer;
+    &.selected{
+      border-bottom: 3px solid black;
+      &:hover{
+        background: white;
+      }
+    }
+    &:hover{
+      background: #eeeeee;
+      @extend .transition;
+    }
+  }
+}

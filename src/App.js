@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 import Header from './component/header';
@@ -12,7 +12,7 @@ export default class App extends Component {
       <Router>
         <div className="App">
           <Header />
-          <Redirect from="/" to="/page/manage" />
+          {/*<Redirect from="/" to="/page/manage" />*/}
           <Switch>
             <Route path="/page/manage" component={Manage} />
             <Route path="/page/request" component={Request} />

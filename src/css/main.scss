@@ -1,6 +1,3 @@
-@import url("https://morph.pe/morph-1.6.4.css");
-@import url('https://fonts.googleapis.com/css?family=Karla|Roboto:300,400');
-
 body{
   background: #F5F5F5;
   overflow-x: hidden; 
@@ -18,33 +15,16 @@ body{
   background: #FFFFFF;
 }
 
-
-.nav-container{
-  position: relative;
-  float: left;
-  width: 300px;
-}
-
 nav{
   position: relative;
   display: grid;
   width: 100%;
   border: 1px solid #CCCCCC;
-}
-nav a.selected{
+  & a.selected{
   background: #49a84c;
   color: white !important;
   font-weight: bold;
-}
-
-.document{
-  position: relative;
-  float: right;
-  height: calc(100% - 100px);
-  width: calc(100% - 360px);
-  border: 1px solid #CCCCCC;
-  padding-left: 20px;
-  padding-right: 20px;
+  }
 }
 
 header a.option {
@@ -59,6 +39,10 @@ button{
 
 button.green, .button.green{
   border: 0 !important;
+}
+
+.text-bold{
+  font-weight: bold;
 }
 
 .float-left{
