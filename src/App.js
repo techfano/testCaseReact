@@ -12,7 +12,7 @@ export default class App extends Component {
       <Router>
         <div className="App">
           <Header />
-          {/*<Redirect from="/" to="/page/manage" />*/}
+          <Redirect from="/" to="/page/manage" />
           <Switch>
             <Route path="/page/manage" component={Manage} />
             <Route path="/page/request" component={Request} />

@@ -5,7 +5,7 @@ export default class Tabs extends Component{
   constructor(props) {
     super(props)
     this.state = {
-      options: this.props.options
+      options: this.props.options || []
     }
     this.initTab();
   }
@@ -18,17 +18,17 @@ export default class Tabs extends Component{
 
   isActive = (option) => {
     const newOptions = this.state.options.map(item => {
-      if (item.name === option.name){
+      if(item.name === option.name){
         item.active = true;
       }else{
         item.active = false;
       }
       return item;
-    })
+    });
 
     this.setState({
       options: newOptions
-    })
+    });
   }
 
   render(){ 

@@ -14,6 +14,68 @@
     "reason": "Data science algorythm",
     "status": "Pending"
   }],
-  "comments": [
+  "manage": [
+    {
+      "name": "user_id",
+      "description": "Contains the primary key used to identify a user of the system",
+      "type": "Contains the primary key used to identify a user of the system",
+      "sensivity": true,
+      "values": [{
+        "name": "null",
+        "description": "Value when user is not found"
+      },
+      {
+        "name": "(integer)",
+        "description": "ID key for user"
+      }]
+    },
+    {
+      "name": "item_id",
+      "description": "Contains the primary key used to identify a user of the system",
+      "type": "Contains the primary key used to identify a user of the system",
+      "sensivity": true,
+      "values": [
+        {
+          "name": "other",
+          "description": "Value when user is not found"
+        },
+        {
+          "name": "(integer)",
+          "description": "ID key for user"
+        }
+      ]
+    },
+    {
+      "name": "user_email",
+      "description": "Contains the primary key used to identify a user of the system",
+      "type": "Contains the primary key used to identify a user of the system",
+      "sensivity": true,
+      "values": [
+        {
+          "name": "other2",
+          "description": "Value when user is not found"
+        },
+        {
+          "name": "(string)",
+          "description": "mail for user"
+        }
+      ]
+    },
+    {
+      "name": "item_views",
+      "description": "Contains the primary key used to identify a user of the system",
+      "type": "Contains the primary key used to identify a user of the system",
+      "sensivity": true,
+      "values": [
+        {
+          "name": "new",
+          "description": "Value when user is not found"
+        },
+        {
+          "name": "(integer)",
+          "description": "views of user"
+        }
+      ]
+    }
   ]
 }
