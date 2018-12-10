@@ -11,13 +11,13 @@ export default class Manage extends React.Component {
         <div className="row">
           <div className="three columns">
             <nav>
-              <a className="selected">
+              <a href="#" className="selected">
                 Option1
               </a>
-              <a>
+              <a href="#">
                 Option1
               </a>
-              <a>
+              <a href="#">
                 Option1
               </a>
             </nav>

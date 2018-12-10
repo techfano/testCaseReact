@@ -1,8 +1,41 @@
 import React from 'react';
+import Tabs from '../component/tabs';
+import Fetch from '../api/fetch';
 
 export default class Request extends React.Component {
 
-  
+  constructor(){
+    super()
+    this.state = {
+      request: []
+    }
+  }
+
+  setRequest = (data) => {
+    this.setState({
+      request: data
+    })
+  }
+
+  callback = (data) => {
+    this.setRequest(data);
+  }
+
+  getAll = () =>{
+    new Fetch().call(this.callback, '/request');
+  }
+
+  getPending = () => {
+    new Fetch().call(this.callback, '/request?status=Pending');
+  }
+
+  getApproved = () => {
+    new Fetch().call(this.callback, '/request?status=Approved');
+  }
+
+  getDenied = () => {
+    new Fetch().call(this.callback, '/request?status=Denied');
+  }
 
   render() {
 
@@ -11,20 +44,21 @@ export default class Request extends React.Component {
         <h1>
           Request
         </h1>
-        <div className="tabs">
-          <div className="option selected">
-            ALL
-          </div>
-          <div className="option">
-            PENDING
-          </div>
-          <div className="option">
-            APPROVED
-          </div>
-          <div className="option">
-            DENIED
-          </div>
-        </div> 
+        <Tabs options={[{
+            name: 'ALL',
+            active: true,
+            click: this.getAll
+          },{
+            name: 'PENDING',
+            click: this.getPending
+          },{
+            name: 'APPROVED',
+            click: this.getApproved
+          },{
+            name: 'DENIED',
+            click: this.getDenied
+          }]}>
+        </Tabs> 
         <div className="row">
           <div className="twelve columns">
             <div className="green-color padding-10">
@@ -49,39 +83,23 @@ export default class Request extends React.Component {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>
-                2017/09/21
-              </td>
-              <td>
-                Data science algo
-              </td>
-              <td className="green-text text-bold center">
-                Approved
-              </td>
-            </tr>
-            <tr>
-              <td>
-                2017/08/13
-              </td>
-              <td>
-                ID key for user
-              </td>
-              <td className="red-text text-bold center">
-                Denied
-              </td>
-            </tr>
-            <tr>
-              <td>
-                2017/08/13
-              </td>
-              <td>
-                ID key for user
-              </td>
-              <td className="yellow-text text-bold center">
-                Pending
-              </td>
-            </tr>
+            {
+              this.state.request.map(row => {
+                return (
+                <tr>
+                  <td>
+                    {row.date}
+                  </td>
+                  <td>
+                    {row.reason}
+                  </td>
+                  <td>
+                    {row.status}
+                  </td>
+                </tr>
+                )
+              })
+            }
           </tbody>
         </table>
       </div>

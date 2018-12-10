@@ -10,15 +10,18 @@
     padding-right: 39px;
     padding-top: 12px;
     padding-bottom: 12px;
+    border-bottom: 3px solid white;
     cursor: pointer;
     &.selected{
       border-bottom: 3px solid black;
       &:hover{
         background: white;
+        border-bottom: 3px solid black;
       }
     }
     &:hover{
       background: #eeeeee;
+      border-bottom: 3px solid #eeeeee;
       @extend .transition;
     }
   }
