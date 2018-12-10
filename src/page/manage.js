@@ -26,7 +26,6 @@ export default class Manage extends React.Component {
     this.setState({
       manageSelected: manage
     })
-    console.log(this.state.manageSelected)
   }
 
   callbackManageList = (data) => {
@@ -87,7 +86,6 @@ export default class Manage extends React.Component {
   }
   
   changeSensivity = (event) =>{
-    console.log(event.target.value);
     const manage = this.state.manageSelected;
     manage.sensivity = event.target.checked;
     this.setState({
@@ -185,8 +183,7 @@ export default class Manage extends React.Component {
         </div>)
     } else {
       const message = this.state.manageSelected.sensivity ? "This is personal data, and cannot be distributed in raw form" : 
-      "This is not personal data, and can be distributed in raw form"
-
+      "This is not personal data, and can be distributed in raw form";
       return (<div>
         <h2>
           Sensivity
