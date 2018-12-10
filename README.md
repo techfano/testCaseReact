@@ -1,25 +1,27 @@
-Steps to follow after to clone the repository
+# FRONTEND TEST CASE REACT
 
-# 1. Install JSON-SERVER
+**Steps to follow after to clone the repository**
+
+## 1. Install JSON-SERVER
 
 **************************
 npm install -g json-server
 **************************
 
-# 2. Inside the folder "data" run this command to open the server with fake data in the port 3001
+## 2. Inside the folder "data" run this command to open the server with fake data in the port 3001
 
 **************************
 - cd data
 - json-server --watch db.json --port 3001
 **************************
 
-# 3. In other console window, inside the main project folder, run this command to install the NodeJS dependencies 
+## 3. In other console window, inside the main project folder, run this command to install the NodeJS dependencies 
 
 **************************
 npm install
 **************************
 
-# 3. Open the Frontend Test with the next command 
+## 4. Open the Frontend Test with the next command 
 
 **************************
 npm start
